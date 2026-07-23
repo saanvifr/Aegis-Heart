@@ -72,10 +72,6 @@ ACCESS_TOKEN_EXPIRE_MINUTES=60
 ```env
 VITE_API_URL=https://your-railway-backend-url.app
 ```
-
----
-
----
 <div align="center">
-  <p>Built with 🩵 for the future of digital health.</p>
+
 </div>
