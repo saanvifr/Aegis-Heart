@@ -75,32 +75,6 @@ VITE_API_URL=https://your-railway-backend-url.app
 
 ---
 
-## 💻 Local Development
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-username/Aegis-Heart.git
-cd Aegis-Heart
-```
-
-### 2. Start the Backend (API)
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # (On Windows use: venv\Scripts\activate)
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
-
-### 3. Start the Frontend (UI)
-Open a new terminal in the root directory:
-```bash
-npm install
-npm run dev
-```
-
-The application will be running at `http://localhost:3000`.
-
 ---
 <div align="center">
   <p>Built with 🩵 for the future of digital health.</p>
