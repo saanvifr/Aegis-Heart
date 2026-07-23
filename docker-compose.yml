@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aegis_backend
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./aegis_heart.db
+    volumes:
+      - ./backend/aegis_heart.db:/app/backend/aegis_heart.db
+      - ./backend/ml:/app/backend/ml
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aegis_frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
